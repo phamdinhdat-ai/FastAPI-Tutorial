@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title> My website </title>
+        <script src = "{{url_for('static', path='hello.js')}}"></script>
+    </head>
+    <body onload="myFunction()"> 
+        <div id="time" style="text-align:right"; width='100%'></div>
+        <h1><div id="ttl">{{name}}</div></h1>
+        <h2>Hello World {{name}}, Wellcome to FastAPI</h2>
+        <img src="{{url_for('static', path="distribute.jpg")}}" alt="" width="300">
+        
+    </body>
+</html>
