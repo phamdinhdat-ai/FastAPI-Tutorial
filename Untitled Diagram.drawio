@@ -1,14 +1,17 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="Page-1" id="gXF7XaJDTd1Gr4BIR_Dp">
-    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="683" dy="371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="3NriWbSSih8YVTjuCFYv-1" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
-          <mxGeometry x="130" y="450" width="120" height="60" as="geometry" />
+        <mxCell id="3NriWbSSih8YVTjuCFYv-2" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="270" y="365" width="530" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="3NriWbSSih8YVTjuCFYv-2" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
-          <mxGeometry x="350" y="450" width="120" height="60" as="geometry" />
+        <mxCell id="3NriWbSSih8YVTjuCFYv-1" value="Key markdown" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="365" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-4" value="{% %} – Statements&lt;br&gt;{{ }} – Expressions to print to the template output&lt;br&gt;{# #} – Comments which are not included in the template output&amp;nbsp;# # # – Line statements" style="text;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="380" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
