@@ -13,6 +13,21 @@
         <mxCell id="3NriWbSSih8YVTjuCFYv-4" value="{% %} – Statements&lt;br&gt;{{ }} – Expressions to print to the template output&lt;br&gt;{# #} – Comments which are not included in the template output&amp;nbsp;# # # – Line statements" style="text;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="400" y="360" width="380" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="310" y="510" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="3NriWbSSih8YVTjuCFYv-13">
+          <mxGeometry width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-9" value="HTML" style="ellipse;whiteSpace=wrap;html=1;rounded=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="3NriWbSSih8YVTjuCFYv-13">
+          <mxGeometry x="20" y="70" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-10" value="JavaScript" style="ellipse;whiteSpace=wrap;html=1;rounded=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="3NriWbSSih8YVTjuCFYv-13">
+          <mxGeometry x="80" y="130" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3NriWbSSih8YVTjuCFYv-11" value="CSS" style="ellipse;whiteSpace=wrap;html=1;rounded=1;sketch=1;jiggle=2;curveFitting=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="3NriWbSSih8YVTjuCFYv-13">
+          <mxGeometry x="120" y="60" width="90" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
