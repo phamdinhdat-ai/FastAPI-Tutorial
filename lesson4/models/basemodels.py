@@ -29,6 +29,7 @@ class XModel(nn.Module):
         x = self.dropout(x)
         x = self.classifer(x)
         return x 
+    
 class XrayModel(nn.Module):
     def __init__(self, n_classes):
         super(XrayModel, self).__init__()

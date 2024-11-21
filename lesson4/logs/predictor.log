@@ -1,0 +1,3 @@
+Starting Model Serving
+Predictor name: resnet152
+Predicted Prob: 1.0 - Predicted ID: 1 - Predicted Class: Pneumonia

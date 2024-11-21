@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Filed 
+from pydantic import BaseModel
 from typing import Dict, List, Callable, Any
 
 class XRayRespone(BaseModel):
