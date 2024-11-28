@@ -1,7 +1,8 @@
-from datetime import datetime, UTC
+from datetime import datetime, timezone
+
 from typing import Optional 
 from sqlmodel import SQLModel, Field 
-
+UTC = timezone.utc
 class UserCreate(SQLModel):
     name: str 
     username: str 
