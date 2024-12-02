@@ -6,7 +6,7 @@ authors = ["phamdinhdat-ai <datolg123@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9.13"
 fastapi = {extras = ["all"], version = "^0.115.5"}
 fastcrud = "^0.15.1"
 sqlmodel = "^0.0.22"

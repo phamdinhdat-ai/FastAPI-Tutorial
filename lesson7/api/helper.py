@@ -43,7 +43,7 @@ def get_password_hash(password: str) -> str:
 
 
 
-async def create_access_token(data:dict[str, Any], expires_delta: timedelta|None = None) -> str: 
+async def create_access_token(data:dict[str, Any], expires_delta: timedelta = None) -> str: 
     to_encode = data.copy()
     if expires_delta: 
         expire = datetime.now(UTC).replace(tzinfo=None) + expires_delta
@@ -56,7 +56,7 @@ async def create_access_token(data:dict[str, Any], expires_delta: timedelta|None
     return jwt.encode(to_encode, SECRET_KEY, algorithm='HS256')
 
 
-async def verify_token(token:str, db: AsyncSession) -> TokenData|None:
+async def verify_token(token:str, db: AsyncSession) -> TokenData:
     try: 
         payload = jwt.decode(token=token, key= SECRET_KEY , algorithms='HS256')
         username_or_email = payload.get('sub')
@@ -84,7 +84,7 @@ async def authenticate_user(username_or_email: str, password: str, db: AsyncSess
 # Dependency
 async def get_current_user(
     token: Annotated[str, Depends(oauth2_scheme)], db: Annotated[AsyncSession, Depends(get_session)]
-) -> dict[str, Any] | None:
+) -> dict[str, Any] :
     """Get the current authenticated user."""
     token_data = await verify_token(token, db)
     if token_data is None:

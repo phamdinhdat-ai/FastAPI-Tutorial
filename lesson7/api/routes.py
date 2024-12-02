@@ -65,3 +65,6 @@ async def login_user(
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
+@user_router.get("/", response_model=UserRead)
+async def greeting():
+    return {"message": "Hello World"}
