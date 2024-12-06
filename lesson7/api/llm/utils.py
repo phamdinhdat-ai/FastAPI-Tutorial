@@ -6,7 +6,6 @@ from pathlib import Path
 import yaml
 from typing import Any, Dict, List, Tuple
 from docling.document_converter import DocumentConverter, PdfFormatOption, WordFormatOption
-
 from docling.datamodel.base_models import InputFormat
 from docling.pipeline.simple_pipeline import SimplePipeline
 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
@@ -17,7 +16,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain_text_splitters.character import RecursiveCharacterTextSplitter
-
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
 import typing 
 from typing import Iterator, List
 from langchain_core.document_loaders import  BaseLoader 
@@ -116,3 +116,33 @@ def load_model(model_hf_path: str, hf_api_token:str):
         
     )
     return llm
+
+
+
+def format_docs(docs: Document):
+    return '\n\n'.join(doc.page_content for doc in docs)
+def llm_chat(llm, vectorstores, request):
+    
+
+    prompt = f"""
+    Please writing an email for user given information following: 
+    Reply_to: {request.reply_to}
+    context: {request.tone}
+    length: {request.len}
+
+    Question: {request.user_input}
+
+    Answer: 
+    """
+    retriever = vectorstores.as_retriever()
+    
+
+    rag_llm = (
+        {"context": retriever , "question":RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+
+    )
+    response = rag_llm.invoke(request.user_input)
+    return response

@@ -41,3 +41,49 @@ for res, score in results:
     print(f"* [SIM = {score:.2f}] | [{res.page_content}]")
 print("="*100)
 llm = load_model(model_hf_path=HF_REPO_ID, hf_api_token=HF_TOKEN)
+
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnableParallel
+from langchain_core.documents  import Document
+from langchain_core.prompts import PromptTemplate
+from typing import Iterable
+def format_docs(docs: Iterable[Document]):
+    return '\n\n'.join([doc.page_content for doc in docs])
+
+
+
+
+
+def llm_chat(llm, vectorstores, question:str):
+    
+    # Reply_to: {request.reply_to}
+    # context: {request.tone}
+    # length: {request.len}
+    prompt = PromptTemplate.from_template("""
+    Given information following: 
+    --------------------
+    Context: {context}
+    --------------------
+    Question: {question}
+    --------------------
+    Answer: 
+    """)
+
+    retriever = vectorstores.as_retriever()
+    
+
+    rag_llm = (
+        {"context": retriever | format_docs, "question":RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+
+    )
+    response = rag_llm.invoke(question)
+    return response
+print("=" * 100)
+print(question_1)
+print("Answer : ")
+response = llm_chat(llm=llm, vectorstores=vectorstores, question=question_1)
+print(response)
