@@ -6,7 +6,7 @@ authors = ["phamdinhdat-ai <datolg123@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9.13"
+python = "^3.9.12"
 fastapi = {extras = ["all"], version = "^0.115.5"}
 fastcrud = "^0.15.1"
 sqlmodel = "^0.0.22"
@@ -15,11 +15,6 @@ aiosqlite = "^0.20.0"
 greenlet = "^3.1.1"
 python-jose = "^3.3.0"
 bcrypt = "^4.2.1"
-torch = "^2.5.1"
-datasets = "^3.1.0"
-transformers = "^4.46.3"
-huggingface = "^0.0.1"
-pydantic = "^2.10.2"
 
 
 [build-system]

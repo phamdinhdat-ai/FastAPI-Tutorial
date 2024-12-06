@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 
 from typing import Optional 
 from sqlmodel import SQLModel, Field 
+from fastapi import File, UploadFile
 UTC = timezone.utc
 class UserCreate(SQLModel):
     name: str 
@@ -24,7 +25,7 @@ class UserCreateInternal(SQLModel):
 class EmailRequest(SQLModel):
     user_input:str 
     reply_to: Optional[str] = None 
-    context: Optional[str] = None 
+    context: UploadFile = File(...)
     length: int = 200 
     tone: str = 'formal'
 
